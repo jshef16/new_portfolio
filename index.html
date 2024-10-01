@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jordan Shefman</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js" integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.drawsvg/1/jquery.drawsvg.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+        <script src="src/intro-background.js"></script>
+    </head>
+    <body>
+        <section id="intro">
+            <div id="logo">
+                <svg viewBox="-10 -10 320 330" fill="none" preserveAspectRatio="xMidYMax meet">
+                    <path d="M123.5 0.5H1V43H79V93C88.5 143.5 150.5 150.5 183.5 166.5C216.5 182.5 235.5 229 220 256C204.5 283 102.333 273 89.5 271C72 289 54.5 290.333 47 299C65.5 303.333 223 318.4 249 284C281.5 241 259 190 257 183.5C255 177 239 137.5 183.5 120.5C139.1 106.9 125 84.8333 123.5 75.5V0.5Z" stroke="black" stroke-width="5"/>
+                    <path d="M134 55C169.6 29 217.833 54.5 237.5 70.5L265.5 36.5C215.5 -8.7 157 -1.66667 134 7.5V55Z" stroke="black" stroke-width="5"/>
+                    <path d="M123.5 156C85 136.5 82.8333 125 79 120.5C79 165.5 85 178 68 216C54.4 246.4 17.6667 252.667 1 252V292.5C15 295.833 51.4 295.4 85 267C118.6 238.6 124.667 181.167 123.5 156Z" stroke="black" stroke-width="5"/>
+                </svg>  
+            </div>
+                
+            <p class="subtitle">Hi, I'm</p>
+            <p class="name">Jordan Shefman</p>
+            <p class="attributes">I'm a <span id="typewriter"></span><span id="cursor">|</span></p>
+            <div id="buttons">
+                <button id="contact">Contact Me</button>
+                <button id="resume">My Resume</button>
+            </div>
+        </section>
+
+
+        <div id="contact-modal">
+            <form id="contact-form" action="">
+                <div id="contact-header">Write Me a Message</div>
+                <div id="status-message"></div>
+                <div class="input-group">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+                
+                <div class="button-group">
+                    <button type="button" id="contact-cancel">Cancel</button>
+                    <input type="submit" value="Submit" id="contact-submit">
+                </div>
+            </form>
+        </div>
+
+        <section id="about-me">
+            <p class="subtitle">About Me</p>
+        </section>
+        
+        
+        
+    </body>
+    <script src="src/animations.js"></script>
+    <script src="src/script.js"></script>
+</html>

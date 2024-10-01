@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Serif+4:ital,opsz@0,8..60;1,8..60&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Oswald:wght@200..700&family=Source+Serif+4:ital,opsz@0,8..60;1,8..60&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+body {
+    background-color: #273043;
+}
+
+li {
+    padding: 0.2rem
+}
+
+section {
+    padding: 10rem 5rem
+}
+/*----------------------- Intro Section -----------------------*/
+
+#intro {
+    height: 100vh;
+}
+
+#logo {
+    position: relative;
+    width: 30%;
+    height: 30%;
+    top: 10%;
+    left: 60%;
+    opacity: 0;
+    overflow-y: visible;
+}
+
+.subtitle {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #EFF6EE;
+}
+
+.name {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 7rem;
+    color: #568259;
+    text-shadow: 0.25rem 0.25rem #EFF6EE;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+
+.attributes {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #EFF6EE;
+    margin-top: 5rem;
+}
+
+#typewriter {
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: #EF8354;
+}
+
+#cursor {
+    color: #EF8354;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+}
+
+#buttons {
+    margin-top: 2rem;
+}
+
+#contact, #resume {
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #9197AE;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:relative;
+    overflow:hidden;
+    margin: 0 20px;
+    background-color: #9197AE;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 0.5rem;
+}
+
+#contact {
+    border: 1px solid #9197AE;
+    background-color: #9197AE;
+}
+#resume {
+    border: 1px solid #EFF6EE;
+    background-color: #EFF6EE;
+}
+  
+#contact:before, #resume:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.3;
+}
+
+#contact:before {
+    background : #EFF6EE;
+}
+#resume:before {
+    background : #9197AE;
+}
+  
+#contact:hover:before, #resume:hover::before {
+    width: 100%;
+}
+
+/*----------------------- Contact Modal Section -----------------------*/
+
+#contact-modal {
+    position: absolute;
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 30rem;
+    margin: 0 auto;
+    background-color: #EFF6EE;
+    border-radius: 0.5rem;
+    z-index: 2; 
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#contact-header {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    width: 100%;
+    max-width: 37rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem; 
+    margin-bottom: 1rem;
+}
+
+#name, #email {
+    flex: 1; 
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+#message {
+    width: 37rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    font-size: 1rem;
+    height: 10rem; 
+    resize: none;
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+button, input[type="submit"] {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#contact-cancel {
+    background-color: #ccc;
+    color: #333;
+}
+
+#contact-cancel:hover {
+    background-color: #999;
+}
+
+input[type="submit"] {
+    background-color: #EF8354;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #e85313;
+}
+
+/*----------------------- Contact Modal Section -----------------------*/
+
+#about-me {
+    height: 100rem;
+    background-color: #63769f;
+}
