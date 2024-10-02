@@ -23,7 +23,11 @@ li {
 }
 
 section {
-    padding: 10rem 5rem
+    padding: 5rem 5rem
+}
+
+a {
+    text-decoration: none;
 }
 /*----------------------- Intro Section -----------------------*/
 
@@ -242,9 +246,157 @@ input[type="submit"]:hover {
     background-color: #e85313;
 }
 
-/*----------------------- Contact Modal Section -----------------------*/
+/*----------------------- About Me Section -----------------------*/
 
 #about-me {
     height: 100rem;
     background-color: #63769f;
 }
+
+.section-heading {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    color: #EFF6EE;
+}
+
+#about-elements {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem; 
+}
+
+#description {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #EFF6EE;
+    width: 50%;
+}
+
+#propic {
+    position: relative;
+    left: 10%;
+    max-width: 40%; 
+    margin-top: -8%;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+#technologies {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #EFF6EE;
+}
+
+.slideshow-container {
+    position: relative;
+    padding: 0 3rem;
+}
+
+.slideshow-title {
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EFF6EE;
+}
+
+.slideshow-label {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #EFF6EE;
+    margin: 0.5rem;
+}
+
+.bar-container {
+    position: relative;
+    height: 0.5rem;
+}
+
+.full-bar, .percent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.full-bar {
+    background-color: #9197AE;
+    width: 100%;
+}
+
+.percent-bar {
+    background-color: #EF8354;
+}
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #EFF6EE;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0.5rem;
+    user-select: none;
+  }
+
+  .prev {
+    left: 0;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
