@@ -248,10 +248,9 @@ input[type="submit"]:hover {
 
 /*----------------------- About Me Section -----------------------*/
 
-#about-me {
-    height: 100rem;
+/* #about-me {
     background-color: #63769f;
-}
+} */
 
 .section-heading {
     font-family: "Oswald", sans-serif;
@@ -265,24 +264,29 @@ input[type="submit"]:hover {
 #about-elements {
     display: flex;
     align-items: flex-start;
-    gap: 2rem; 
 }
 
-#description {
+#about-me-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+}
+
+.description {
     font-family: "Source Serif 4", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
     color: #EFF6EE;
-    width: 50%;
 }
 
 #propic {
     position: relative;
-    left: 10%;
     max-width: 40%; 
     margin-top: -8%;
+    margin-left: 10%;
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
@@ -304,7 +308,7 @@ input[type="submit"]:hover {
     font-family: "Michroma", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #EFF6EE;
+    color: #568259;
 }
 
 .slideshow-label {
@@ -337,11 +341,15 @@ input[type="submit"]:hover {
 
 .percent-bar {
     background-color: #EF8354;
+    box-shadow: -0.5rem 0.5rem 0.5rem #EF8354;
 }
   
   /* Hide the images by default */
   .mySlides {
     display: none;
+  }
+  .mySlides.active {
+    display: block;
   }
   
   /* Next & previous buttons */
